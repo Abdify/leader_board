@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&family=Yusei+Magic&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 2rem;
+    color: #272727;
+    font-family: 'Yusei Magic', sans-serif;
+}
+h3{
+    font-size: 1.3rem;
+}
+a{
+    color: gold;
+}
+body{
+    background-color: #272727;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+main{
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+section{
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.top_players, .blogs, .courses{
+    display: grid;
+    grid-gap: 30px;
+    margin-top: 20px;
+    place-items: center;
+}
+.top_players, .courses{
+    grid-template-columns: repeat(3, 1fr);
+}
+.blogs{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.player, .blog{
+    display: flex;
+    align-items: center;
+}
+.player img{
+    max-width: 50px;
+    margin-right: 20px;
+}
+.blog img{
+    max-width: 200px;
+    height: 120px;
+    margin-right: 20px;
+}
+.thumbnail img{
+    max-width: 200px;
+    height: 100px;
+}
+.unfilled{
+    color: lightgray;
+}
+
+@media (max-width: 992px){
+    .top_players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 668px){
+    .top_players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        flex-direction: column;
+    }
+
+}
